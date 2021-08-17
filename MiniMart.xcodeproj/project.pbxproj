@@ -20,6 +20,8 @@
 		2A15FC7E26CB557000EF0AF5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC7D26CB557000EF0AF5 /* API.swift */; };
 		2A15FC8026CB560F00EF0AF5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC7F26CB560F00EF0AF5 /* Network.swift */; };
 		2A15FC8226CB5B5E00EF0AF5 /* ProductListPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC8126CB5B5E00EF0AF5 /* ProductListPageView.swift */; };
+		2A15FC8426CB716100EF0AF5 /* ProductDetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC8326CB716100EF0AF5 /* ProductDetailPageView.swift */; };
+		2A15FC8626CB736000EF0AF5 /* CartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC8526CB736000EF0AF5 /* CartPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		2A15FC7D26CB557000EF0AF5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2A15FC7F26CB560F00EF0AF5 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		2A15FC8126CB5B5E00EF0AF5 /* ProductListPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPageView.swift; sourceTree = "<group>"; };
+		2A15FC8326CB716100EF0AF5 /* ProductDetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPageView.swift; sourceTree = "<group>"; };
+		2A15FC8526CB736000EF0AF5 /* CartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageView.swift; sourceTree = "<group>"; };
 		8AEC041E26B26823000E997E /* Tutorial.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tutorial.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				2A15FC8126CB5B5E00EF0AF5 /* ProductListPageView.swift */,
+				2A15FC8326CB716100EF0AF5 /* ProductDetailPageView.swift */,
+				2A15FC8526CB736000EF0AF5 /* CartPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,11 +334,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FD9CA62692B3A700BBCD33 /* UserDefaults+Codable.swift in Sources */,
+				2A15FC8426CB716100EF0AF5 /* ProductDetailPageView.swift in Sources */,
 				2A15FC8226CB5B5E00EF0AF5 /* ProductListPageView.swift in Sources */,
 				1152031526A66A7500555FBE /* ContentView.swift in Sources */,
 				11FD9CB72692C4BE00BBCD33 /* RemoteImage.swift in Sources */,
 				11A47030269404B000E9C8AD /* ProcessInfo+Extension.swift in Sources */,
 				2A15FC7E26CB557000EF0AF5 /* API.swift in Sources */,
+				2A15FC8626CB736000EF0AF5 /* CartPageView.swift in Sources */,
 				2A15FC8026CB560F00EF0AF5 /* Network.swift in Sources */,
 				11FD9C632692A79600BBCD33 /* MiniMartApp.swift in Sources */,
 			);

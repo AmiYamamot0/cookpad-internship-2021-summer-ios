@@ -1,24 +1,37 @@
 import SwiftUI
 
 struct ProductListPageView: View {
-    var products: [FetchProductsQuery.Data.Product] = []
+    @State var products: [FetchProductsQuery.Data.Product] = []
     var body: some View {
         List(products, id: \.id) { product in
-            HStack(alignment: .top) {
-                RemoteImage(urlString: product.imageUrl)
-                    .frame(width: 100, height: 100)
-                VStack(alignment: .leading) {
-                    Text(product.name)
-                    Spacer()
-                        .frame(height: 8)
-                    Text(product.summary)
-                    Spacer()
-                    Text("\(product.price)円")
-                        .frame(maxWidth: .infinity, alignment: .trailing)
+            NavigationLink(destination: ProductDetailPageView(product: product)) {
+                HStack(alignment: .top) {
+                    RemoteImage(urlString: product.imageUrl)
+                        .frame(width: 100, height: 100)
+                    VStack(alignment: .leading) {
+                        Text(product.name)
+                        Spacer()
+                            .frame(height: 8)
+                        Text(product.summary)
+                        Spacer()
+                        Text("\(product.price)円")
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                    .padding(.vertical, 8)
                 }
-                .padding(.vertical, 8)
             }
         }
+        .onAppear {
+            Network.shared.apollo.fetch(query: FetchProductsQuery()) { result in
+                switch result {
+                case let .success(graphqlResult):
+                    self.products = graphqlResult.data?.products ?? []
+                case .failure:
+                    break
+                }
+            }
+        }
+        .navigationTitle("MiniMart")
     }
 }
 
