@@ -23,6 +23,7 @@
 		2A15FC8426CB716100EF0AF5 /* ProductDetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC8326CB716100EF0AF5 /* ProductDetailPageView.swift */; };
 		2A15FC8626CB736000EF0AF5 /* CartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC8526CB736000EF0AF5 /* CartPageView.swift */; };
 		2A15FC8826CB8C9700EF0AF5 /* CartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC8726CB8C9700EF0AF5 /* CartState.swift */; };
+		2A15FC8A26CBA29000EF0AF5 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15FC8926CBA29000EF0AF5 /* CartItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		2A15FC8326CB716100EF0AF5 /* ProductDetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPageView.swift; sourceTree = "<group>"; };
 		2A15FC8526CB736000EF0AF5 /* CartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageView.swift; sourceTree = "<group>"; };
 		2A15FC8726CB8C9700EF0AF5 /* CartState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartState.swift; sourceTree = "<group>"; };
+		2A15FC8926CBA29000EF0AF5 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		8AEC041E26B26823000E997E /* Tutorial.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tutorial.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2A15FC8726CB8C9700EF0AF5 /* CartState.swift */,
+				2A15FC8926CBA29000EF0AF5 /* CartItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				2A15FC8626CB736000EF0AF5 /* CartPageView.swift in Sources */,
 				2A15FC8026CB560F00EF0AF5 /* Network.swift in Sources */,
 				2A15FC8826CB8C9700EF0AF5 /* CartState.swift in Sources */,
+				2A15FC8A26CBA29000EF0AF5 /* CartItem.swift in Sources */,
 				11FD9C632692A79600BBCD33 /* MiniMartApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

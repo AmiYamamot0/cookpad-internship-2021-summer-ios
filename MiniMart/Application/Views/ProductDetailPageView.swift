@@ -17,7 +17,7 @@ struct ProductDetailPageView: View {
                 Text(product.summary)
                 Spacer()
                 Button(action: {
-                    cartState.products.append(product)
+                    cartState.add(product: product)
                 }) {
                     Text("カートに追加")
                 }
@@ -36,7 +36,7 @@ struct ProductDetailPageView: View {
                 }) {
                     VStack() {
                         Image(systemName: "folder")
-                        Text("\(cartState.products.count)")
+                        Text("\(cartState.count)")
                     }
                 }
             }

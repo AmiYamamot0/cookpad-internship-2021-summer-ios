@@ -43,7 +43,7 @@ struct ProductListPageView: View {
                 }) {
                     VStack() {
                         Image(systemName: "folder")
-                        Text("\(cartState.products.count)")
+                        Text("\(cartState.count)")
                     }
                 }
             }
