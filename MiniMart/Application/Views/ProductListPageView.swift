@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ProductListPageView: View {
     @State var products: [FetchProductsQuery.Data.Product] = []
+    @State var isCartViewPresented: Bool = false
+    
     var body: some View {
         List(products, id: \.id) { product in
             NavigationLink(destination: ProductDetailPageView(product: product)) {
@@ -21,6 +23,7 @@ struct ProductListPageView: View {
                 }
             }
         }
+        .listStyle(PlainListStyle())
         .onAppear {
             Network.shared.apollo.fetch(query: FetchProductsQuery()) { result in
                 switch result {
@@ -32,6 +35,20 @@ struct ProductListPageView: View {
             }
         }
         .navigationTitle("MiniMart")
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button(action: {
+                    self.isCartViewPresented = true
+                }) {
+                    Image(systemName: "folder")
+                }
+            }
+        }
+        .sheet(isPresented: $isCartViewPresented) {
+            NavigationView {
+                CartPageView()
+            }
+        }
     }
 }
 
@@ -54,6 +71,8 @@ struct ProductListPageView_Previews: PreviewProvider {
     ]
     
     static var previews: some View {
-        ProductListPageView(products: products)
+        NavigationView {
+            ProductListPageView(products: products)
+        }
     }
 }
